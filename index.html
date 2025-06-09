@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoftFixes – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #1A1A40, #3F2B96, #2C2C54);
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --white: #ffffff;
+      --accent: #a78bfa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-gradient);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--white);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+    }
+
+    .logo {
+      max-width: 140px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #c4b5fd;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="softfixes_logo.png" alt="SoftFixes Logo" class="logo" />
+    <h1>We’re Launching Soon</h1>
+    <p>SoftFixes is a SaaS startup building better digital tools—starting with smart solutions for your workflows.</p>
+    <p><strong>Fix it Fast / Own the Future</strong></p>
+    <button class="btn" onclick="alert('Launching Soon!')">Notify Me</button>
+  </div>
+</body>
+</html>
